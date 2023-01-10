@@ -7,7 +7,6 @@ mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.CONNECTIONSTRING)
   .then(() => {
-    console.log("agora sim conectou certinho");
     app.emit("pronto");
   })
   .catch((e) => console.log(e));
